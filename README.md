@@ -2,7 +2,9 @@
 
 This is a public repository of notebooks dmonstrating the use of Fulcra's Life API.
 
-For Fulcra's developer docs page, see [https://fulcradynamics.github.io/developer-docs/](https://fulcradynamics.github.io/developer-docs/).
+For Fulcra's main developer docs page, see [https://fulcradynamics.github.io/developer-docs/](https://fulcradynamics.github.io/developer-docs/).
+
+These notebooks use the `fulcra-api` Python module.  See the detailed guide and API reference for this here: [https://fulcradynamics.github.io/fulcra-api-python/](https://fulcradynamics.github.io/fulcra-api-python/)
 
 All code here is covered under the [Apache 2.0 license](LICENSE).
 
