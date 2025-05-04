@@ -1,6 +1,6 @@
 # Fulcra Dynamics Demos
 
-This is a public repository of notebooks dmonstrating the use of Fulcra's Life API.
+This is a public repository of notebooks demonstrating the use of Fulcra's Life API.
 
 For Fulcra's main developer docs page, see [https://fulcradynamics.github.io/developer-docs/](https://fulcradynamics.github.io/developer-docs/).
 
