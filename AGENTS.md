@@ -81,21 +81,9 @@ Local connection using `uvx`:
 }
 ```
 
-## Available MCP Tools
+## MCP tools and tips
 
-The MCP server exposes the following tools:
-
-| Tool | Description |
-|------|-------------|
-| `get_user_info` | Returns general info about the user (time zone, calendar IDs, metadata). |
-| `get_metrics_catalog` | Lists all available time-series metrics that can be queried. Call this first to discover what data is available. |
-| `get_metric_time_series` | Retrieves time-series data for a single metric with configurable sample rate and optional calculations (max, min, delta, mean, rolling mean, etc.). |
-| `get_metric_samples` | Retrieves raw samples for a metric (as opposed to resampled time series). Useful when you need the original data points. |
-| `get_sleep_cycles` | Returns sleep cycles summarized from sleep stage data, with configurable cycle gap and stage filtering. |
-| `get_workouts` | Returns workout details (type, duration, metrics) for a time period. |
-| `get_annotations` | Retrieves user-logged annotations (moment, duration, boolean, numeric, scale) for a time period. |
-| `get_location_at_time` | Gets the user's location at a specific point in time, with optional reverse geocoding. |
-| `get_location_time_series` | Retrieves a time series of user locations over a period, with configurable sample rate and distance filtering. |
+There are MCP tools available to both get general information about the user and specific data. Start with the former, with calls like `get_user_info`, `get_sleep_cycles`, `annotations_catalog`, to get a sense of what the user has chosen to record. Then use the other fuctions (e.g. `metric_time_series`, `metric_samples`, `get_sleep_cycles`, etc. to get the data for specific time range(s).
 
 All time parameters must include time zones (ISO 8601 format). Always translate result timestamps to the user's local time zone when known.
 
