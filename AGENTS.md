@@ -1,4 +1,4 @@
-# AGENTS.md — Context by Fulcra
+# AGENTS.md - Context by Fulcra
 
 > Context by Fulcra - bridging the gap between agents and humans.
 
@@ -14,10 +14,9 @@ Data is primarily collected through the human's phone; the human installs [Conte
 The human user gets to investigate their data interactively using beautiful mobile and [web apps](https://context.fulcradynamics.com/).
 
 ### Agentic/Programmatic Access To the User's Data
-* Fully supported [OAuth2 REST API](https://fulcradynamics.github.io/developer-docs/):
-    * [OpenAPI spec](https://api.fulcradynamics.com/openapi.json)
-* [Python client library](https://fulcradynamics.github.io/fulcra-api-python/) (`pip install fulcra-api`): For an easy way to use the client library. Handles authentication for you.
-* [MCP Server Docs](https://fulcradynamics.github.io/developer-docs/mcp-server/): A guide on how to use the MCP server.
+* [Main developer docs](https://docs.fulcradynamics.com)
+* [OpenAPI spec](https://api.fulcradynamics.com/openapi.json)
+* [Python client library and CLI](https://fulcradynamics.github.io/fulcra-api-python/) (`pip install fulcra-api`): For an easy way to use the client library. Handles authentication for you.
 * [MCP server](https://mcp.fulcradynamics.com): The endpoint to the public MCP server. The server uses Streamable HTTP transport with OAuth2 authorization. Context users can use this server with their own account to securely access their data.
 * [MCP server source code](https://github.com/fulcradynamics/fulcra-context-mcp): The open-source repository for the MCP server. Useful for inspecting available tools, running locally, or contributing.
 
@@ -107,11 +106,9 @@ Example metrics from the catalog: `StepCount`, `HeartRate`, `HeartRateVariabilit
 
 ## Best Practices for Agents
 
-- **Use appropriate sample rates.** When querying time series data, choose a `samprate` that balances resolution with performance. For daily overviews, 3600 seconds (hourly) works well. For detailed analysis, 60–300 seconds.
+- **Use appropriate sample rates.** When querying time series data, choose a `samprate` that balances resolution with performance. For daily overviews, 3600 seconds (hourly) works well. For detailed analysis, 60-300 seconds.
 - **Sleep spans midnight.** Sleep cycles typically start on day N and end on day N+1. When querying sleep data, account for this by extending your date range.
-- **Check the metrics catalog first.** Use `get_metrics_catalog` (MCP) or `/data/v0/metrics_catalog` (REST) to discover what data is available for a given user before querying.
-- **Respect permissions.** Only access data your human has granted you. The platform enforces scoped permissions and maintains a full audit trail.
-- **Correlate across domains.** The real power of Context is combining data streams — sleep quality with nutrition, HRV with training load, location with calendar events. Look for patterns across domains.
+- **Correlate across domains.** The real power of Context is combining data streams - sleep quality with nutrition, HRV with training load, location with calendar events. Look for patterns across domains.
 
 ### Example: Querying Data with the Python Client
 
